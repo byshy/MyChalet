@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "39950700111",
+    "firebase_url": "https://mychalet-88c96.firebaseio.com",
+    "project_id": "mychalet-88c96",
+    "storage_bucket": "mychalet-88c96.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39950700111:android:680606f7e81172f8",
+        "android_client_info": {
+          "package_name": "com.byshy.mychalet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39950700111-8vde1l873hh092pecm3s9fcj3ktgi61a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.byshy.mychalet",
+            "certificate_hash": "bca7a11619cdc7d57adfe0057935262326dc6f27"
+          }
+        },
+        {
+          "client_id": "39950700111-fqeagks7s181n6heqsl089723r8qu4qg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.byshy.mychalet",
+            "certificate_hash": "13669beabe38b82a4a3ea82bcfa49c2d8a650b24"
+          }
+        },
+        {
+          "client_id": "39950700111-kqjna8hcnvft6nopt79o987sd6b99crf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJ8fOHiymieK05TEdpf-B_WJqnipSbYVw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39950700111-kqjna8hcnvft6nopt79o987sd6b99crf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
