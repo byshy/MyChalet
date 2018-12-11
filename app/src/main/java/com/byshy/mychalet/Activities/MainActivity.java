@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mDatabase.child("Admin_01").child("Name").setValue("Basel");
+                //البرنامج حيوان ومش راضي يشتغل !!
             }
         });
     }
