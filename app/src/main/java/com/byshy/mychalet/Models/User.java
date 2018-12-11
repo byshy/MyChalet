@@ -3,16 +3,15 @@ package com.byshy.mychalet.Models;
 public class User {
 
     private String mFirstName;
-    private String mLastName;
+//    private String mLastName;
     private String mEmail;
 //    private int mUserType;
 //    private Chalet mChalet;
 
     public User(){}
 
-    public User(String mFirstName, String mLastName, String mEmail) {
+    public User(String mFirstName, String mEmail) {
         this.mFirstName = mFirstName;
-        this.mLastName = mLastName;
         this.mEmail = mEmail;
 //        this.mUserType = 0;
 //        this.mChalet = null;
@@ -26,13 +25,13 @@ public class User {
         this.mFirstName = mFirstName;
     }
 
-    public String getLastName() {
-        return mLastName;
-    }
-
-    public void setLastName(String mLastName) {
-        this.mLastName = mLastName;
-    }
+//    public String getLastName() {
+//        return mLastName;
+//    }
+//
+//    public void setLastName(String mLastName) {
+//        this.mLastName = mLastName;
+//    }
 
     public String getEmail() {
         return mEmail;
