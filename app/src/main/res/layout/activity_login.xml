@@ -84,6 +84,7 @@
         android:clickable="true"
         android:focusable="true"
         android:foreground="?android:attr/selectableItemBackground"
+        android:onClick="signin"
         android:padding="5dp"
         android:text="@string/txt_sign_in"
         android:textColor="#ffffff"

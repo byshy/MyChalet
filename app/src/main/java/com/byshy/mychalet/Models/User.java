@@ -3,10 +3,10 @@ package com.byshy.mychalet.Models;
 public class User {
 
     private String mFirstName;
-//    private String mLastName;
+    private String mLastName;
     private String mEmail;
-//    private int mUserType;
-//    private Chalet mChalet;
+    private int mUserType;
+    private Chalet mChalet;
 
     public User(){}
 
@@ -25,13 +25,13 @@ public class User {
         this.mFirstName = mFirstName;
     }
 
-//    public String getLastName() {
-//        return mLastName;
-//    }
-//
-//    public void setLastName(String mLastName) {
-//        this.mLastName = mLastName;
-//    }
+    public String getLastName() {
+        return mLastName;
+    }
+
+    public void setLastName(String mLastName) {
+        this.mLastName = mLastName;
+    }
 
     public String getEmail() {
         return mEmail;
@@ -41,20 +41,20 @@ public class User {
         this.mEmail = mEmail;
     }
 
-//    public int getUserType() {
-//        return mUserType;
-//    }
-//
-//    public void setUserType(int mUserType) {
-//        this.mUserType = mUserType;
-//    }
-//
-//    public Chalet getChalet() {
-//        return mChalet;
-//    }
-//
-//    public void setChalet(Chalet mChalet) {
-//        this.mChalet = mChalet;
-//    }
+    public int getUserType() {
+        return mUserType;
+    }
+
+    public void setUserType(int mUserType) {
+        this.mUserType = mUserType;
+    }
+
+    public Chalet getChalet() {
+        return mChalet;
+    }
+
+    public void setChalet(Chalet mChalet) {
+        this.mChalet = mChalet;
+    }
 
 }
