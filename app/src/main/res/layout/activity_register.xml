@@ -4,90 +4,76 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/register_create_new_account"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:text="إنشاء حساب جديد على منصة MyChalet"
-            android:textSize="18sp" />
+    <TextView
+        android:id="@+id/register_create_new_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Create new Account"
+        android:textSize="18sp" />
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/register_first_name_input_container"
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/register_first_name_input_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register_create_new_account"
+        android:layout_margin="10dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/register_first_name_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/register_create_new_account"
-            android:layout_margin="10dp">
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="@string/txt_first_name"
+            android:inputType="textPersonName" />
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/register_first_name_input"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginStart="16dp"
-                android:hint="@string/txt_first_name"
-                android:inputType="textPersonName" />
+    </android.support.design.widget.TextInputLayout>
 
-        </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/register_email_input_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register_first_name_input_container"
+        android:layout_margin="10dp">
 
-        <!--<android.support.design.widget.TextInputLayout-->
-            <!--android:id="@+id/register_last_name_input_container"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_below="@id/register_first_name_input_container"-->
-            <!--android:layout_margin="10dp">-->
-
-            <!--<android.support.design.widget.TextInputEditText-->
-                <!--android:id="@+id/register_last_name_input"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginEnd="16sp"-->
-                <!--android:layout_marginStart="16dp"-->
-                <!--android:hint="@string/txt_last_name"-->
-                <!--android:inputType="textPersonName" />-->
-
-        <!--</android.support.design.widget.TextInputLayout>-->
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/register_email_input_container"
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/register_email_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/register_first_name_input_container"
-            android:layout_margin="10dp">
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16sp"
+            android:layout_marginRight="16sp"
+            android:hint="@string/txt_email"
+            android:inputType="textEmailAddress" />
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/register_email_input"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16sp"
-                android:layout_marginStart="16dp"
-                android:hint="@string/txt_email"
-                android:inputType="textEmailAddress" />
+    </android.support.design.widget.TextInputLayout>
 
-        </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/register_password_input_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register_email_input_container"
+        android:layout_margin="10dp"
+        app:passwordToggleEnabled="true">
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/register_password_input_container"
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/register_password_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/register_email_input_container"
-            android:layout_margin="10dp"
-            app:passwordToggleEnabled="true">
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16sp"
+            android:layout_marginRight="16sp"
+            android:hint="@string/txt_password"
+            android:inputType="textPassword" />
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/register_password_input"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16sp"
-                android:layout_marginStart="16dp"
-                android:hint="@string/txt_password"
-                android:inputType="textPassword" />
-
-        </android.support.design.widget.TextInputLayout>
+    </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/register_repeat_password_input_container"
@@ -101,8 +87,10 @@
             android:id="@+id/register_repeat_password_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16sp"
             android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16sp"
+            android:layout_marginRight="16sp"
             android:hint="@string/txt_password"
             android:inputType="textPassword" />
 
@@ -110,46 +98,21 @@
 
 
     <Button
-            android:id="@+id/register_sign_up"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/register_repeat_password_input_container"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/curved_button"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:padding="5dp"
-            android:text="@string/txt_register"
-            android:textColor="#ffffff"
-            android:textSize="20sp" />
-
-    <Button
-        android:id="@+id/google_sign_up_button"
+        android:id="@+id/register_sign_up"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/register_sign_up"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:background="@drawable/curved_button"
-        android:backgroundTint="#a1a1a1"
+        android:backgroundTint="@color/colorAccent"
         android:clickable="true"
         android:focusable="true"
         android:foreground="?android:attr/selectableItemBackground"
         android:padding="5dp"
-        android:text="Google"
-        android:textAllCaps="false"
-        android:textColor="#000000"
+        android:text="@string/txt_register"
+        android:textColor="#ffffff"
         android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/register_existing_account"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="16dp"
-            android:layout_centerHorizontal="true"
-            android:text="هل لديك حساب ؟ تسجيل الدخول" />
 
 </RelativeLayout>

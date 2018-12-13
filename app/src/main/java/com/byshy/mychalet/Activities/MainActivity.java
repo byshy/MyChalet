@@ -27,28 +27,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mAuth = FirebaseAuth.getInstance();
+
         mUpload = findViewById(R.id.firebase);
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
         mUpload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mDatabase.child("Admin_01").child("Name").setValue("Basel");
-                //البرنامج حيوان ومش راضي يشتغل !!
-            }
-        });
-        Chalet chalet  = new Chalet("my chalet","address ","chalet email ",5);
-        FirebaseDatabase.getInstance().getReference("Users")
-                .child(mAuth.getCurrentUser().getUid())
-                .setValue(chalet).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if (task.isSuccessful()) {
-                    Toast.makeText(MainActivity.this, "Check your email!", Toast.LENGTH_LONG).show();
-                } else {
-                    Toast.makeText(MainActivity.this, "Something went wrong", Toast.LENGTH_LONG).show();
-                    Log.d("FirebaseDatabase", "onComplete" + task.getException().getMessage());
-                }
+
+                Chalet chalet = new Chalet("my chalet", "address ", "chalet email ", 5);
+                FirebaseDatabase.getInstance().getReference("Users/" + mAuth.getCurrentUser().getUid())
+                        .child("Chalet")
+                        .setValue(chalet).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(MainActivity.this, "Check your email!", Toast.LENGTH_LONG).show();
+                            } else {
+                                Toast.makeText(MainActivity.this, "Something went wrong", Toast.LENGTH_LONG).show();
+                                Log.d("FirebaseDatabase", "onComplete" + task.getException().getMessage());
+                            }
+                        }
+                });
             }
         });
     }

@@ -3,7 +3,6 @@ package com.byshy.mychalet.Models;
 public class User {
 
     private String mFirstName;
-    private String mLastName;
     private String mEmail;
     private int mUserType;
     private Chalet mChalet;
@@ -23,14 +22,6 @@ public class User {
 
     public void setFirstName(String mFirstName) {
         this.mFirstName = mFirstName;
-    }
-
-    public String getLastName() {
-        return mLastName;
-    }
-
-    public void setLastName(String mLastName) {
-        this.mLastName = mLastName;
     }
 
     public String getEmail() {
