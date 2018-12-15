@@ -70,8 +70,8 @@ public class LoginActivity extends AppCompatActivity {
 
 
     public void signIn(View view) {
-//        Intent register = new Intent(this, MainActivity.class);
-//        startActivity(register);
+        Intent main = new Intent(this, MainActivity.class);
+        startActivity(main);
     }
 
     @Override
@@ -92,7 +92,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         }
     }
-
 
     private void firebaseAuthWithGoogle(final GoogleSignInAccount acct) {
 //        Log.d(firebaseAuthWithGoogle, "firebaseAuthWithGoogle:" + acct.getId());
@@ -131,7 +130,7 @@ public class LoginActivity extends AppCompatActivity {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
                             Toast.makeText(LoginActivity.this, "failed", Toast.LENGTH_SHORT).show();
-//                            Snackbar.make(findViewById(R.id.main_layout), "Authentication Failed.", Snackbar.LENGTH_SHORT).show();
+//                            Snackbar.make(findViewById(R.chaletName.main_layout), "Authentication Failed.", Snackbar.LENGTH_SHORT).show();
 //                            updateUI(null);
                         }
 
